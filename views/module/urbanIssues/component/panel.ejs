@@ -1,0 +1,97 @@
+<div class="content">
+	<div class="card">
+		<div class="card-header header-elements-inline">
+			<h5 class="card-title"><%= module.urbanIssues.language[page.lang].panel_tableTitle%></h5>
+			<div class="header-elements">
+				<div class="list-icons">
+					<a class="list-icons-item" data-action="collapse"></a>
+				</div>
+			</div>
+		</div>
+		<div class="card-body">
+			<%= module.urbanIssues.language[page.lang].panel_tableDescription%>
+		</div>
+		<div id="dataTableContent">
+			<table class="table datatable-basic table-striped">
+				<thead>
+					<tr>
+						<th class="text-center"><%= module.urbanIssues.language[page.lang].panel_tableColumnAction%>
+						</th>
+						<th><%= module.urbanIssues.language[page.lang].panel_tableColumnId%></th>
+						<th><%= module.urbanIssues.language[page.lang].panel_tableColumnCategory%></th>
+						<th><%= module.urbanIssues.language[page.lang].panel_tableColumnDescription%></th>
+						<th><%= module.urbanIssues.language[page.lang].panel_tableColumnStatus%></th>
+						<th><%= module.urbanIssues.language[page.lang].panel_tableColumnCreated%></th>
+						<th><%= module.urbanIssues.language[page.lang].panel_tableColumnUpdated%></th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+<div id="modal_theme" class="modal fade" tabindex="1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div id="modalHeader" class="modal-header">
+
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="card">
+					<div class="card-body">
+						<div id="modalMap" class="issue-map"></div>
+					</div>
+
+					<div class="card-body border-top-0">
+
+						<div class="d-sm-flex flex-sm-wrap mb-3">
+							<div class="font-weight-semibold">Id</div>
+							<div class="ml-sm-auto mt-2 mt-sm-0" id="modalTitle"></div>
+						</div>
+						<div class="d-sm-flex flex-sm-wrap mb-3">
+							<div class="font-weight-semibold">
+								<%= module.urbanIssues.language[page.lang].panel_dialogLocation%></div>
+							<div class="ml-sm-auto mt-2 mt-sm-0" id="modalLocation"></div>
+						</div>
+
+						<div class="d-sm-flex flex-sm-wrap mb-3">
+							<div class="font-weight-semibold">
+								<%= module.urbanIssues.language[page.lang].panel_dialogCategory%></div>
+							<div class="ml-sm-auto mt-2 mt-sm-0" id="modalCategory"></div>
+						</div>
+
+						<div class="d-sm-flex flex-sm-wrap mb-3">
+							<div class="font-weight-semibold">
+								<%= module.urbanIssues.language[page.lang].panel_dialogDate%></div>
+							<div class="ml-sm-auto mt-2 mt-sm-0" id="modalDate"></div>
+						</div>
+
+						<div class="d-sm-flex flex-sm-wrap mb-3">
+							<div class="font-weight-semibold">
+								<%= module.urbanIssues.language[page.lang].panel_dialogDescription%></div>
+							<div class="ml-sm-auto mt-2 mt-sm-0" id="modalDescription"></div>
+						</div>
+
+						<div class="d-sm-flex flex-sm-wrap mb-3">
+							<div class="font-weight-semibold">
+								<%= module.urbanIssues.language[page.lang].panel_dialogAddress%></div>
+							<div class="ml-sm-auto mt-2 mt-sm-0" id="modalAddress"></div>
+						</div>
+
+						<div class="d-sm-flex flex-sm-wrap">
+							<div class="font-weight-semibold">
+								<%= module.urbanIssues.language[page.lang].panel_dialogImages%></div>
+							<div class="ml-sm-auto mt-2 mt-sm-0" id="modalImages"></div>
+						</div>
+					</div>
+					<a href="#" onclick="printModal('modal_theme');" class="btn bg-dark" ><%= module.urbanIssues.language[page.lang].panel_dialogPrint%> <i class="icon-printer ml-2"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /default modal -->

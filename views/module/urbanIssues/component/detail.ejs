@@ -1,0 +1,119 @@
+<div class="content-wrapper">
+	<div class="profile-cover">
+		<div class="profile-cover-img">
+			<div id="issue-detail-map" style="height: 100%"></div>
+		</div>
+		<div class="media align-items-center text-center text-md-left flex-column flex-md-row m-0">
+			<div class="media-body">
+				<h1 id="issue-detail-title-issue-id" class="mb-0" style="color:gray"></h1>
+				<span id="issue-detail-title-issue-category-name" class="d-block" style="color:gray"></span>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Profile navigation -->
+	<div class="navbar navbar-expand-lg navbar-light bg-light">
+		<ul class="nav navbar-nav">
+			<li class="nav-item">
+				<div class="navbar-nav-link">
+					<i class="icon-stack-text mr-2"></i>
+					<%= module.urbanIssues.language[page.lang].detail_reports%>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- /profile navigation -->
+
+	<div class="content">
+		<div class="d-flex align-items-start flex-column flex-md-row">
+			<div class="tab-content w-100 order-2 order-md-1">
+				<div class="tab-pane fade active show">
+					<!-- Timeline -->
+					<div class="timeline timeline-left">
+						<div class="timeline-container" id="issue-detail-reports">
+							<div class="timeline-row">
+								<div class="timeline-icon">
+									<div class="bg-info-400">
+										<i class="icon-plus22"></i>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="card border-left-3 border-left-info-400 rounded-left-0">
+											<div class="card-body">
+												<div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+													<div>
+														<h6id><%= user.profile.name%> <%= user.profile.surname%> </h6>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label
+														class=""><%= module.urbanIssues.language[page.lang].detail_status%></label>
+													<select id="issue-detail-form-status-list" data-placeholder="Status"
+														class="form-control form-control-select2" data-fouc>
+														<option></option>
+														<% for (var i in module.urbanIssues.settings.status) { %>
+														<option value="<%= module.urbanIssues.settings.status[i].id%>">
+															<%= module.urbanIssues.language[page.lang]["status_" + module.urbanIssues.settings.status[i].name]%>
+														</option>
+														<% } %>
+													</select>
+												</div>
+												<div class="form-group">
+													<label
+														class=""><%= module.urbanIssues.language[page.lang].detail_category%></label>
+													<select id="issue-detail-form-category-list"
+														data-placeholder="Category"
+														class="form-control form-control-select2" data-fouc>
+														<option></option>
+														<% for (var i in module.urbanIssues.settings.categories) { %>
+														<option
+															value="<%= module.urbanIssues.settings.categories[i].id%>">
+															<%= module.urbanIssues.language[page.lang]["category_" + module.urbanIssues.settings.categories[i].name]%>
+														</option>
+														<% } %>
+													</select>
+												</div>
+												<div class="form-group">
+													<label
+														class=""><%= module.urbanIssues.language[page.lang].detail_report%></label>
+													<textarea id="issue-detail-form-report-text" rows="4" cols="4"
+														class="form-control elastic elastic-manual"
+														placeholder="<%= module.urbanIssues.language[page.lang].detail_enterYourReport%>"></textarea>
+												</div>
+												<div class="form-group">
+													<label
+														class=""><%= module.urbanIssues.language[page.lang].detail_feedback%></label>
+													<div class="form-check form-check-switchery">
+														<label class="form-check-label">
+															<input id="issue-detail-form-report-feedback"
+																type="checkbox"
+																class="form-check-input-switchery-primary" data-fouc>
+															<%= module.urbanIssues.language[page.lang].detail_feedback_description%>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div
+												class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+												<button id="issue-detail-set-report" type="button"
+													class="btn bg-info-400 btn-labeled btn-labeled-right ml-auto">
+													<b><i class="icon-paperplane"></i></b>
+													<%= module.urbanIssues.language[page.lang].detail_buttonSend%></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>

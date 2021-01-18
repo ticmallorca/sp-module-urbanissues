@@ -1,0 +1,100 @@
+{
+	"name": "urbanIssues",
+	"version": "1.0.0",
+	"link": "/urbanIssues",
+	"settings": {},
+	"language": {
+		"en": {},
+		"ca": {},
+		"es": {}
+	},
+	"component": {
+		"sideBar": {
+			"name": "sideBar",
+			"link": "/issue",
+			"dependencies": {
+				"css": [],
+				"javascript": [
+					"/module/urbanIssues/js/sideBar/sideBar.js",
+					"/module/urbanIssues/js/sideBar/controller.js",
+					"/module/urbanIssues/js/sideBar/view.js"
+				]
+			}
+		},
+		"detail": {
+			"name": "detail",
+			"dependencies": {
+				"css": [
+					"/resources/css/maps/ol.css",
+					"/resources/css/maps/maps.css"
+				],
+				"javascript": [
+					"/resources/js/plugins/maps/openstreetmap/ol.js",
+					"/resources/js/plugins/maps/openstreetmap/renderMap.js",
+					"/resources/js/plugins/forms/inputs/autosize.min.js",
+					"/resources/js/plugins/forms/styling/uniform.min.js",
+					"/resources/js/plugins/forms/styling/switchery.min.js",
+					"/resources/js/plugins/forms/styling/switch.min.js",
+
+					"/module/urbanIssues/js/detail/checkboxes_radios.js",
+					"/module/urbanIssues/js/detail/form_controls_extended.js",
+					"/module/urbanIssues/js/detail/form_checkboxes_radios.js",
+					"/module/urbanIssues/js/detail/form_floating_labels.js",
+					"/module/urbanIssues/js/detail/panel.js",
+					"/module/urbanIssues/js/detail/view.js",
+					"/module/urbanIssues/js/detail/controller.js"
+				]
+			}
+		},
+		"panel": {
+			"name": "panel",
+			"dependencies": {
+				"css": [
+					"/resources/css/maps/ol.css",
+					"/resources/css/maps/maps.css"
+				],
+				"javascript": [
+					"/resources/js/plugins/maps/openstreetmap/ol.js",
+					"/resources/js/plugins/maps/openstreetmap/renderMap.js",
+					"/module/urbanIssues/js/panel/panel.js",
+					"/module/urbanIssues/js/panel/view.js",
+					"/module/urbanIssues/js/panel/controller.js"
+				]
+			}
+		},
+		"dashboard": {
+			"name": "dashboard",
+			"dependencies": {
+				"css": [],
+				"javascript": [
+					"/resources/js/plugins/visualization/echarts/echarts.min.js",
+					"/module/urbanIssues/js/dashboard/dashboard.js",
+					"/module/urbanIssues/js/dashboard/view.js",
+					"/module/urbanIssues/js/dashboard/controller.js"
+				]
+			}
+		}
+	},
+	"dependencies": {
+		"css": [],
+		"javascript": [
+			"/js/tools/moment/moment.min.js",
+			"/js/tools/moment/moment-with-locales.min.js",
+			"/js/tools/moment/moment-locale-es.js",
+			"/js/tools/printThis/printThis.js",
+			"/resources/js/plugins/tables/datatables/datatables.min.js",
+			"//cdn.datatables.net/plug-ins/1.10.12/sorting/datetime-moment.js",
+			"/resources/js/plugins/tables/datatables/extensions/buttons.min.js",
+			"/resources/js/plugins/tables/datatables/extensions/col_reorder.min.js",
+			"/resources/js/plugins/tables/datatables/extensions/natural_sort.js",
+			"/resources/js/plugins/tables/datatables/extensions/responsive.min.js",
+			"/resources/js/plugins/tables/datatables/extensions/jszip/jszip.min.js",
+			"/resources/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js",
+			"/resources/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js",
+			"/resources/js/plugins/notifications/bootbox.min.js",
+			"/resources/js/plugins/forms/selects/select2.min.js",
+			"/resources/js/plugins/media/fancybox.min.js",
+			"/resources/js/plugins/forms/styling/uniform.min.js"
+		]
+	}
+}
